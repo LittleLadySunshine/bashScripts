@@ -1,3 +1,5 @@
+#!/bin/bash
+
 rawurlencode() {
   while IFS="" read -r string; do
     local strlen=${#string}
