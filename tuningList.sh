@@ -6,7 +6,7 @@ read customerID
 echo ${customerID}
 fastlycli c ${customerID}
 
-curl -g -H "Fastly-Key: $Fastly_Token" "https://api.fastly.com/wafs?filter[customer_id]=5gmn89OSsx22lk5DxCix89" | jq '.data | .[] | .attributes | .service_id'
+curl -g -H "Fastly-Key: $Fastly_Token" "https://api.fastly.com/wafs?filter[customer_id]=${customerID}" | jq '.data | .[] | .attributes | .service_id'
 
 echo -n "Which service are you looking to create a report for?"
 read serviceID
