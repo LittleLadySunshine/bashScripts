@@ -1,3 +1,4 @@
+#!/bin/bash
 # url encode all special characters
 rawurlencode() {
   while IFS="" read -r string; do
